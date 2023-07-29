@@ -17,6 +17,7 @@ import React, { useRef } from 'react'
 import * as tf from '@tensorflow/tfjs';
 import * as facemesh from '@tensorflow-models/facemesh';
 import WebCam from 'react-webcam';
+import { drawMesh } from './Utilities';
 
 function MainImages() {
     //Set references
@@ -51,7 +52,8 @@ function MainImages() {
             const face = await net.estimateFaces(video);
             console.log(face);
             //Get canvas context for drawing
-
+            const ctx = canvasRef.current.getContext("2d");
+            drawMesh(face, ctx);
 
         }
     }
