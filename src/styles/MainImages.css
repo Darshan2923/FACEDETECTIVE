@@ -1,0 +1,15 @@
+.faceapp__container img {
+    width: 60vw;
+    height: 80vh;
+    aspect-ratio: 1/1;
+}
+
+.faceapp__container {
+    display: flex;
+}
+
+canvas {
+    width: 60vw;
+    height: 80vh;
+    position: absolute;
+}
